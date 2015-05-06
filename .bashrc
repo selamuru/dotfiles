@@ -40,6 +40,15 @@ reset=$(tput sgr0)
 # Alias g to git such that git completion rules are preserved
 complete -o bashdefault -o default -o nospace -F _git g
 
+# Git states for prompt
+# * - unstaged
+# + - staged
+# $ - stashed
+# % - untracked
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+
 # Prompt
 export PS1='\[\e[0;31m\]♥  \[\e[1;36m\]\@ `if [ $? = 0 ]; then echo "\[\e[0;32m\]✔"; else echo "\[\e[0;31m\]✘"; fi` \[\e[00;37m\]\u\[\e[01;37m\]:$(unalias git; __git_ps1 "\[$red\][\[$green\]%s\[$red\]]\[$reset\]""%s\[\e[00m\]")\[\e[01;34m\]\w\[\e[00m\]\$ '
 
