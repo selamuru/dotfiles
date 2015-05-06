@@ -1,0 +1,50 @@
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  interactive = auto
+  ui = true
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[branch]
+  autosetuprebase = always
+
+[push]
+  default = current
+
+[fetch]
+  recurseSubmodules = true
+
+[diff]
+  renames = true
+
+[core]
+  excludesfile = ~/.gitexcludes
+
+[user]
+  name = Sura Elamurugu
+  email = "TODO: FILL IN"
+[hub]
+  host = github.com
+  protocol = https
+
+[alias]
+  l=log --pretty=format:\"%Cgreen%h%Creset %s [%Cred%an%Creset]\" --graph
+
+[grep]
+  linenumber = true
