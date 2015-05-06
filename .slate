@@ -1,0 +1,60 @@
+# General aliases
+alias sox screenOriginX
+alias soy screenOriginY
+alias ssx screenSizeX
+alias ssy screenSizeY
+
+# Position aliases
+alias centered ${sox}+${ssx}/8;${soy}+${ssy}/8 ${ssx}/8*6;${ssy}/8*6
+alias fullscreen ${sox};${soy} ${ssx};${ssy}
+alias leftHalf ${sox};${soy} ${ssx}/2;${ssy}
+alias bottomHalf ${sox};${soy}+${ssy}/2 ${ssx};${ssy}/2
+alias topHalf ${sox};${soy} ${ssx};${ssy}/2
+alias rightHalf ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}
+alias topLeftQuarter ${sox};${soy} ${ssx}/2;${ssy}/2
+alias topRightQuarter ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}/2
+alias bottomLeftQuarter ${sox};${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
+alias bottomRightQuarter ${sox}+${ssx}/2;${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
+
+# Push bindings
+bind right:ctrl;cmd;alt   move ${rightHalf}
+bind left:ctrl;cmd;alt    move ${leftHalf}
+bind up:ctrl;cmd;alt      move ${topHalf}
+bind down:ctrl;cmd;alt    move ${bottomHalf}
+bind up:alt;ctrl;shift    move ${topRightQuarter}
+bind right:alt;ctrl;shift move ${bottomRightQuarter}
+bind down:alt;ctrl;shift  move ${bottomLeftQuarter}
+bind left:alt;ctrl;shift  move ${topLeftQuarter}
+bind m:ctrl;alt;cmd       move ${fullscreen}
+bind g:ctrl;alt;cmd       move ${centered}
+
+# laptop only layout
+layout laptop 'Spotify' move ${fullscreen}
+layout laptop 'Google Chrome' move ${fullscreen}
+layout laptop 'iTerm' move ${rightHalf}
+layout laptop 'TextMate' move ${leftHalf}
+layout laptop 'PyCharm' move ${fullscreen}
+layout laptop 'Slack' move ${leftHalf}
+
+# 2 monitor layout - work
+layout twoScreen 'Slack' move ${bottomRightQuarter} 0
+layout twoScreen 'Spotify' move ${bottomLeftQuarter} 0
+layout twoScreen 'iTerm' move ${rightHalf} 0
+layout twoScreen 'TextMate' move ${leftHalf} 0
+layout twoScreen 'PyCharm' move ${leftHalf} 0
+layout twoScreen 'Google Chrome' move ${fullscreen} 1
+layout twoScreen 'Notes' move ${rightHalf} 1
+
+bind 1:cmd;shift layout laptop
+bind 2:cmd;shift layout twoScreen
+
+default twoScreen count:2
+
+# Focus on applications
+alias hyper cmd;shift
+bind c:${hyper} focus 'Google Chrome'
+bind m:${hyper} focus 'TextMate'
+bind p:${hyper} focus 'PyCharm'
+bind x:${hyper} focus 'GitX'
+bind t:${hyper} focus 'iTerm'
+bind s:${hyper} focus 'Slack'
