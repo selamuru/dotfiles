@@ -55,7 +55,7 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # Prompt
-export PS1='\[\e[0;31m\]♥  \[\e[1;36m\]\@ `if [ $? = 0 ]; then echo "\[\e[0;32m\]✔"; else echo "\[\e[0;31m\]✘"; fi` \[\e[00;37m\]\u\[\e[01;37m\]:$(unalias git; __git_ps1 "\[$red\][\[$green\]%s\[$red\]]\[$reset\]""%s\[\e[00m\]")\[\e[01;34m\]\w\[\e[00m\]\$ '
+export PS1='\[\e[0;31m\]♥  \[\e[1;36m\]\@ `if [ $? = 0 ]; then echo "\[\e[0;32m\]✔"; else echo "\[\e[0;31m\]✘"; fi` \[\e[00;37m\]\u\[\e[01;37m\]:$(unalias git; __git_ps1 "\[$red\][\[$green\]%s\[$red\]]\[$reset\]""%s\[\e[00m\]")\[\e[01;34m\]\w\n\[\e[00m\]\$ '
 
 # ---------------------------------------------
 # Less Configs
