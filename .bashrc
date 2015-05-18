@@ -5,6 +5,11 @@
 export PATH=$PATH:/usr/local/bin/r
 
 # ---------------------------------------------
+# Use Sublime Text as the editor for many commands that prompt for input
+# ---------------------------------------------
+export EDITOR='sub -w'
+
+# ---------------------------------------------
 # Terminal History
 # ---------------------------------------------
 
