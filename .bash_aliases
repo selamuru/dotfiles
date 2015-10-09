@@ -12,6 +12,7 @@ alias gcp='git cherry-pick'
 alias gl='git l'
 alias gg='git grep'
 alias git='hub'
+alias clean_branches='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # ---------------------------------------------
 # Unix
