@@ -29,7 +29,7 @@ alias grep='grep --color=auto'
 function title { echo -ne "\033]0;$1\007"; }
 
 # Moves a file to the MacOS trash
-function trash { command mv "$@" ~/.Trash; } 
+function trash { command mv "$@" ~/.Trash; }
 
 # Extract most know archives with one command
 function extract {
@@ -54,7 +54,7 @@ function extract {
 }
 
 # Find file under the current directory
-function ff { find . -name "$@"; }     
+function ff { find . -name "$@"; }
 
 # Pull all git repos and print output
 function pull {
