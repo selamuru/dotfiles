@@ -92,11 +92,3 @@ fi
 if [ -f /opt/local/etc/bash_completion ]; then
   . /usr/local/etc/bash_completion
 fi
-
-# Pull all git repos and print output
-function pull {
-  find ~/repos -type d -name .git \
-    | xargs -n 1 dirname \
-    | sort \
-    | while read line; do echo $line && cd $line && git pull; done
-}
