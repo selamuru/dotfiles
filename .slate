@@ -34,6 +34,7 @@ layout laptop 'Google Chrome' move ${fullscreen}
 layout laptop 'iTerm' move ${rightHalf}
 layout laptop 'TextMate' move ${leftHalf}
 layout laptop 'PyCharm' move ${fullscreen}
+layout laptop 'Sublime Text' move ${fullscreen}
 layout laptop 'Slack' move ${leftHalf}
 
 # 2 monitor layout - work
@@ -42,6 +43,7 @@ layout twoScreen 'Spotify' move ${bottomLeftQuarter} 0
 layout twoScreen 'iTerm' move ${rightHalf} 0
 layout twoScreen 'TextMate' move ${leftHalf} 0
 layout twoScreen 'PyCharm' move ${leftHalf} 0
+layout twoScreen 'Sublime Text' move ${leftHalf} 0
 layout twoScreen 'Google Chrome' move ${fullscreen} 1
 layout twoScreen 'Notes' move ${rightHalf} 1
 
@@ -58,3 +60,4 @@ bind p:${hyper} focus 'PyCharm'
 bind x:${hyper} focus 'GitX'
 bind t:${hyper} focus 'iTerm'
 bind s:${hyper} focus 'Slack'
+bind l:${hyper} focus 'Sublime Text'
