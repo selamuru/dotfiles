@@ -9,6 +9,7 @@ Slate
 Jumpcut
 Charles Proxy
 Flux
+LiteSwitch X
 Chrome
 Evernote
 Microsoft Office
