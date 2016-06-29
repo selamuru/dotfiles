@@ -1,0 +1,17 @@
+Applications to install when setting up new laptop:
+
+iTerm2
+TextMate 2
+Sublime Text
+GitX
+Alfred 2
+Slate
+Jumpcut
+Charles Proxy
+Flux
+Chrome
+Evernote
+Microsoft Office
+Spotify
+Avast Mac Security
+Screenhero
