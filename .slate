@@ -31,24 +31,36 @@ bind g:ctrl;alt;cmd       move ${centered}
 # laptop only layout
 layout laptop 'Spotify' move ${fullscreen}
 layout laptop 'Google Chrome' move ${fullscreen}
-layout laptop 'iTerm' move ${rightHalf}
+layout laptop 'iTerm2' move ${rightHalf}
 layout laptop 'TextMate' move ${leftHalf}
-layout laptop 'PyCharm' move ${fullscreen}
+layout laptop 'IntelliJ IDEA' move ${fullscreen}
 layout laptop 'Sublime Text' move ${fullscreen}
 layout laptop 'Slack' move ${leftHalf}
+layout laptop 'SourceTree' move ${leftHalf}
 
-# 2 monitor layout - work
+# 2 monitor layout
 layout twoScreen 'Slack' move ${bottomRightQuarter} 0
-layout twoScreen 'Spotify' move ${bottomLeftQuarter} 0
-layout twoScreen 'iTerm' move ${rightHalf} 0
+layout twoScreen 'Spotify' move ${fullscreen} 1
+layout twoScreen 'iTerm2' move ${rightHalf} 0
 layout twoScreen 'TextMate' move ${leftHalf} 0
-layout twoScreen 'PyCharm' move ${leftHalf} 0
+layout twoScreen 'IntelliJ IDEA' move ${leftHalf} 0
 layout twoScreen 'Sublime Text' move ${leftHalf} 0
 layout twoScreen 'Google Chrome' move ${fullscreen} 1
-layout twoScreen 'Notes' move ${rightHalf} 1
+layout twoScreen 'SourceTree' move ${fullscreen} 1
 
-bind 1:cmd;shift layout laptop
-bind 2:cmd;shift layout twoScreen
+# monitor only layout
+layout monitorOnly 'Spotify' move ${bottomLeftQuarter}
+layout monitorOnly 'Google Chrome' move ${leftHalf}
+layout monitorOnly 'iTerm2' move ${rightHalf}
+layout monitorOnly 'TextMate' move ${leftHalf}
+layout monitorOnly 'IntelliJ IDEA' move ${leftHalf}
+layout monitorOnly 'Sublime Text' move ${leftHalf}
+layout monitorOnly 'Slack' move ${bottomRightQuarter}
+layout monitorOnly 'SourceTree' move ${leftHalf}
+
+bind 1:alt;shift layout laptop
+bind 2:alt;shift layout twoScreen
+bind 3:alt;shift layout monitorOnly
 
 default twoScreen count:2
 
@@ -56,8 +68,8 @@ default twoScreen count:2
 alias hyper cmd;shift
 bind c:${hyper} focus 'Google Chrome'
 bind m:${hyper} focus 'TextMate'
-bind p:${hyper} focus 'PyCharm'
-bind x:${hyper} focus 'GitX'
-bind t:${hyper} focus 'iTerm'
+bind i:${hyper} focus 'IntelliJ'
+bind x:${hyper} focus 'SourceTree'
+bind t:${hyper} focus 'iTerm2'
 bind s:${hyper} focus 'Slack'
 bind l:${hyper} focus 'Sublime Text'
