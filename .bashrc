@@ -14,13 +14,13 @@ export EDITOR='sub -w'
 # ---------------------------------------------
 
 # Save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
 export HISTTIMEFORMAT='%b %d %H:%M:%S: ' # reformat timestamp
 shopt -s histappend                      # append to history, don't overwrite it
-set cmdhist
+
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # ---------------------------------------------
 # Terminal Colors
