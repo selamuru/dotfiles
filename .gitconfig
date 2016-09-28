@@ -38,13 +38,18 @@
 
 [user]
   name = Sura Elamurugu
-  email = "TODO: FILL IN"
-[hub]
-  host = github.com
-  protocol = https
+  email = "TODO: Fill-in"
 
 [alias]
-  l=log --pretty=format:\"%Cgreen%h%Creset %s [%Cred%an%Creset]\" --graph
+  l=log --graph --abbrev-commit --decorate --format=format:'%C(green)%h%C(reset) %C(blue)%ai%C(reset) %s [%Cred%an%Creset]' --all 
 
 [grep]
   linenumber = true
+
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
